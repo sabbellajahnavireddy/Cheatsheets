@@ -351,19 +351,7 @@ year: 2011
 ## Dictionary Methods Summary:
 
 - Python has a set of built-in methods that you can use on dictionaries.
-  Method 	      Description
-- clear()	Removes all the elements from the dictionary
-- copy()	Returns a copy of the dictionary
-- fromkeys()	Returns a dictionary with the specified keys and value
-- get()	Returns the value of the specified key
-- items()	Returns a list containing a tuple for each key value pair
-- keys()	Returns a list containing the dictionary's keys
-- pop()	Removes the element with the specified key
-- popitem()	Removes the last inserted key-value pair
-- setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
-- update()	Updates the dictionary with the specified key-value pairs
-- values()	Returns a list of all the values in the dictionary
-
+  
 # STRINGS
 
 - Strings in python are surrounded by either single quotation marks, or double quotation marks.
@@ -607,8 +595,37 @@ print(txt)
 ```
 **Output: We are the so-called "Vikings" from the north.**
 
+**String Methods**
+| **Method**            | **Description**                         | **Example**                          |
+|------------------------|------------------------------------------|--------------------------------------|
+| `upper()`              | Converts to uppercase                    | `"hello".upper()` → `"HELLO"`        |
+| `lower()`              | Converts to lowercase                    | `"HELLO".lower()` → `"hello"`        |
+| `title()`              | Capitalizes first letter of each word    | `"python guide".title()`             |
+| `capitalize()`         | Capitalizes first character              | `"hello".capitalize()`               |
+| `strip()`              | Removes whitespace                       | `" hi ".strip()`                     |
+| `replace(old, new)`    | Replaces substring                       | `"hi".replace("h", "H")`             |
+| `split(sep)`           | Splits string into list                  | `"a,b,c".split(",")`                 |
+| `join(iterable)`       | Joins list into string                   | `",".join(['a','b','c'])`            |
+| `startswith(sub)`      | Checks prefix                            | `"Python".startswith("Py")`          |
+| `endswith(sub)`        | Checks suffix                            | `"file.txt".endswith(".txt")`        |
+| `find(sub)`            | Returns index of substring               | `"hello".find("e")`                  |
+| `count(sub)`           | Counts occurrences                       | `"banana".count("a")`                |
+
 # ARRAYS
 
+| **Method**   | **Description** |
+|---------------|-----------------|
+| `append()`    | Adds an element at the end of the list |
+| `clear()`     | Removes all the elements from the list |
+| `copy()`      | Returns a copy of the list |
+| `count()`     | Returns the number of elements with the specified value |
+| `extend()`    | Adds the elements of a list (or any iterable) to the end of the current list |
+| `index()`     | Returns the index of the first element with the specified value |
+| `insert()`    | Adds an element at the specified position |
+| `pop()`       | Removes the element at the specified position |
+| `remove()`    | Removes the first item with the specified value |
+| `reverse()`   | Reverses the order of the list |
+| `sort()`      | Sorts the list in ascending order by default |
 **Note:**
 - Python does not have built-in support for Arrays, but Python Lists can be used instead.
 - Arrays are used to store multiple values in one single variable.
@@ -622,18 +639,6 @@ print(a)
 **Array Methods**
 
 - Python has a set of built-in methods that you can use on lists/arrays.
-Method 	Description
-append()	Adds an element at the end of the list
-clear()	  Removes all the elements from the list
-copy()	  Returns a copy of the list
-count()	  Returns the number of elements with the specified value
-extend()	Add the elements of a list (or any iterable), to the end of the current list
-index() 	Returns the index of the first element with the specified value
-insert()	Adds an element at the specified position
-pop()   	Removes the element at the specified position
-remove()	Removes the first item with the specified value
-reverse()	Reverses the order of the list
-sort()	  Sorts the list
 
 
 # LIST
@@ -648,18 +653,20 @@ print(thislist)
 List Methods
 
 Python has a set of built-in methods that you can use on lists.
-Method      	Description
-append()	Adds an element at the end of the list
-clear()  	Removes all the elements from the list
-copy()  	Returns a copy of the list
-count() 	Returns the number of elements with the specified value
-extend()	Add the elements of a list (or any iterable), to the end of the current list
-index()	    Returns the index of the first element with the specified value
-insert()	Adds an element at the specified position
-pop()	    Removes the element at the specified position
-remove()	Removes the item with the specified value
-reverse()	Reverses the order of the list
-sort()	    Sorts the list
+
+| **Method** | **Description** |
+|-------------|-----------------|
+| `append()`  | Adds an element at the end of the list |
+| `clear()`   | Removes all the elements from the list |
+| `copy()`    | Returns a copy of the list |
+| `count()`   | Returns the number of elements with the specified value |
+| `extend()`  | Adds the elements of another list (or any iterable) to the end of the current list |
+| `index()`   | Returns the index of the first element with the specified value |
+| `insert()`  | Adds an element at the specified position |
+| `pop()`     | Removes the element at the specified position |
+| `remove()`  | Removes the item with the specified value |
+| `reverse()` | Reverses the order of the list |
+| `sort()`    | Sorts the list in ascending order by default |
 
 
 References:
