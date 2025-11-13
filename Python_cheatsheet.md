@@ -1,6 +1,6 @@
 # PYTHON
 
-# TABLE OF CONTENTS
+## TABLE OF CONTENTS
 1. Dictionaries
 2. Strings
 3. Arrays
@@ -667,4 +667,5 @@ References:
 - https://www.w3schools.com/python/python_strings.asp
 - https://www.w3schools.com/python/python_lists.asp
 - https://www.w3schools.com/python/python_arrays.asp
+- https://www.youtube.com/watch?v=2IsF7DEtVjg
 
