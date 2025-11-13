@@ -76,7 +76,7 @@ thisdict = dict(name = "John", age = 36, country = "Norway")
 print(thisdict)
 **Output: {'name': 'John', 'age': 36, 'country': 'Norway'}**
 ```
-# Accessing Items
+## Accessing Items
 
 - You can access the items of a dictionary by referring to its key name, inside square brackets:
 
