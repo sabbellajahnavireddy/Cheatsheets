@@ -89,12 +89,25 @@ These functions summarize data.
 Aggregation functions always work together with GROUP BY (unless applied to entire table).
 
 ## 5. Filtering queries
-- SQL filtering happens in two places:
-**WHERE** - filters rows before grouping
-Use WHERE to filter individual rows.
 
-**HAVING** - filters groups after grouping
-Use HAVING to filter aggregate results.
+
+| **Filter**      | **Description** |
+|------------------|-----------------|
+| `WHERE`          | Filters rows **before** grouping or aggregation; used for non-aggregated conditions. |
+| `HAVING`         | Filters groups **after** aggregation; used with `GROUP BY`. |
+| `AND`            | Combines multiple conditions (all must be true). |
+| `OR`             | Combines conditions where at least one must be true. |
+| `NOT`            | Negates a condition. |
+| `IN`             | Checks if a value exists within a list of values. |
+| `NOT IN`         | Checks if a value does **not** exist in a list. |
+| `BETWEEN`        | Filters values within an inclusive range. |
+| `LIKE`           | Pattern matching using `%` or `_`. |
+| `NOT LIKE`       | Opposite of `LIKE`; excludes matching patterns. |
+| `IS NULL`        | Returns rows where the column value is `NULL`. |
+| `IS NOT NULL`    | Returns rows where the value is **not** `NULL`. |
+| `EXISTS`         | True if a subquery returns at least one row. |
+| `ANY / SOME`     | Compares a value with **any** value returned by a list/subquery. |
+| `ALL`            | Compares a value with **all** values returned by a list/subquery. |
 
 ### 6. Normalization
 - Reduce redundancy, avoid anomalies, improve data integrity.
