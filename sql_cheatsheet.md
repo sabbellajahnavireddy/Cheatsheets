@@ -15,7 +15,7 @@
 
 ### 1. ACID PROPERTIES
 - ACID ensures reliable transactions in databases.
-- A — Atomicity
+- **A — Atomicity**
 A transaction happens completely or not at all.
 - Example:
 Bank transfer: ₹500 from A → B
@@ -23,28 +23,28 @@ Deduct ₹500 from A
 Add ₹500 to B
 If second step fails, first step must be rolled back.
 
-- C — Consistency
+- **C — Consistency**
 Database must move from one valid state to another.
 Invalid data should never be written.
 
 - Example:
 If account balance cannot go below 0, the DB must enforce this.
 
-- I — Isolation
+- **I — Isolation**
 
 Parallel transactions should not affect each other.
 
 - Example:
 Two users buying the last movie ticket — DB ensures only one gets it.
 
-- D — Durability
+- **D — Durability**
 Once a transaction is committed, it is permanently saved (even after crash).
 
 ### 2. CAP Theorem
 - In a distributed system, you can only guarantee two out of the three:
 Consistency (C), Availability (A), and Partition Tolerance (P).
 - A distributed database must tolerate partitions (network failures). So in practice, it chooses CP or AP.
-1. Consistency (C)
+1. **Consistency (C)**
 - All nodes see the same data at the same time. If you write data to node A and immediately read from node B, you should get the same value.
 - Example:
 User updates profile photo.
@@ -53,14 +53,14 @@ User reads from Server B
 If Server B immediately shows the updated photo → Consistent
 - Guarantee:
 Reads always return the latest committed data.
-2. Availability (A)
+2. **Availability (A)**
 - The system always responds, even if some nodes are down. The response may not be the latest data
 - But the system never refuses the request
 - Example:
 If you ask for product price and the DB replies:
 “Price: ₹499” → OK
 “Error: Unable to get data” → NOT available
-3. Partition Tolerance (P)
+3. **Partition Tolerance (P)**
 - The system continues to work even if the network breaks into two or more parts and nodes can’t talk to each other.
 - This happens in real life very often:
 network outages
@@ -71,11 +71,16 @@ A distributed system must handle partitions. So P is mandatory.
 ### 3. Joins
 - A join combines rows from two (or more) tables based on a related column between them. Joins let you pull related data together without duplicating storage.
 There are five types of joins:
-1. Inner Join: It returns rows where the join condition matches in both tables.
-2. Left outer join(Left join): It returns all rows from the left table; matching rows from right table or NULLs if no match.
-3. Right outer join(Right join): It is symmetric to LEFT JOIN all rows from right table, matching from left or NULL.
-4. Full outer join: It returns rows when there is a match in either left or right table. Non-matching sides produce NULLs.
-5. Self join: A table joined with itself (useful for hierarchical or comparing rows in same table).
+
+  **1. Inner Join:** It returns rows where the join condition matches in both tables.
+  
+  **2. Left outer join(Left join):** It returns all rows from the left table; matching rows from right table or NULLs if no match.
+  
+  **3. Right outer join(Right join):** It is symmetric to LEFT JOIN all rows from right table, matching from left or NULL.
+  
+  **4. Full outer join:** It returns rows when there is a match in either left or right table. Non-matching sides produce NULLs.
+
+  **5. Self join:** A table joined with itself (useful for hierarchical or comparing rows in same table).
 
 ### 4. Aggregation
 - Aggregation functions operate on a set of rows and return a single value.
